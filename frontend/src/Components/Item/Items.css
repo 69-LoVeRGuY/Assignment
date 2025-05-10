@@ -1,0 +1,26 @@
+.item{
+    width: 350px;
+}
+
+.item p{
+    margin: 6px 0px;
+}
+
+.priceandrating{
+    display: flex;
+    gap: 20px;
+}
+
+.price{
+    font-size: 18px;
+}
+
+.rating img{
+    display: flex;
+    height: 5px;
+    width: 5px;
+}
+
+.rating{
+    font-size: 10px;
+}
