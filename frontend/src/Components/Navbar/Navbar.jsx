@@ -3,10 +3,15 @@ import { useState } from 'react'
 import './Navbar.css'
 import logo from '../Assets/MoE_logo.png'
 import { Link, Links } from 'react-router-dom'
+import { useAuth } from '../../Context/AuthContext'
 
 export const Navbar = () => {
 
-    const[menu, setMenu] = useState("all");
+    const {isLoggedIn, setIsLoggedIn} = useAuth();
+
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+    }
 
   return (
     <div className='navbar'>
@@ -18,7 +23,8 @@ export const Navbar = () => {
             <input type="text" name="search" id="search"placeholder='Search'/>
         </div>
         <div className="login">
-            <Link to='/login'><button>Login</button></Link>
+            {isLoggedIn ? <Link to='/'><button onClick={handleLogout}>Log Out</button></Link>:
+            <Link to='/login'><button>Login</button></Link>}
         </div>
         
     </div>

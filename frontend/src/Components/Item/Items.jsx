@@ -1,54 +1,40 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react'
 import axios from "axios"
 import './Items.css'
 import { Loading } from './Loading'
 import star from '../Assets/star.jpg'
-import dropdown_icon from '../Assets/dropdown.png'
+import ShopContext from '../../Context/ShopContext'
+import { Link } from 'react-router-dom'
 
-export const Items = () => {
+export const Items = (props) => {
 
-    const [loading, setLoading] = useState(false);
-    const [data, setData] = useState([]);
-
-    useEffect(() => {
-        setLoading(true);
-        axios({
-            method: "GET",
-            url: "https://fakestoreapi.com/products",
-        }).then((res) => {
-            console.log(res.data);
-            setData(res.data);
-        }).catch((e) => console.log(e))
-        .finally(() => setLoading(false));
-    },[]);
+    const {contextValue} = useContext(ShopContext);
 
   return(<div className='item-card'>
-    <div className="page-and-sort">
+    {/* <div className="page-and-sort">
         <p>
             <span>Showing 1-20</span> out of 100 products
         </p>
         <div className="sort">
             Sort by <img src={dropdown_icon} alt='' />
         </div>
-    </div>
-    {loading && (<Loading />)}
+    </div> */}
+
     <div className="item">
-    {data.map((product) => (
-        <div className='Product'>
-            <img src={product.image} alt='Product Image' id='image'/>
-            <p>{product.title}</p>
+    <Link to={`/products/${props.id}`} style={{textDecoration: 'none'}}><div className='Product'>
+            <img src={props.img} alt='Product Image' id='image'/>
+            <p>{props.title}</p>
             <div className="priceandrating">
                 <div className="price">
-                    Price: ${product.price}
+                    Price: ${props.price}
                 </div>
                 <div className="rating">
                     <img src= {star} alt='stars' />
-                    {product.rating.rate}
+                    {props.rating}
                 </div>
             </div>
-        </div>
-    ))}
+        </div></Link>
     </div>
     </div>
 );

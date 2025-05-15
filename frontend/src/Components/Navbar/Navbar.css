@@ -1,8 +1,10 @@
 .navbar{
     display: flex;
-    /* box-shadow: 0 1px 2px -2px black; */
     justify-content: space-between;
     height: 75px;
+    background: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .navlogo{
@@ -13,17 +15,18 @@
 }
 
 .navlogo img{
-    height: 35px;
-    width: 35px;
+    height: 45px;
+    width: 45px;
     padding: 0px;
     border: 0px;
 }
 
 .navlogo p{
     font-size: 30px;
-    padding: 0px;
+    padding-left: 15px;
     border: 0px;
     margin: 0px;
+    color: rgb(235, 235, 235);
 }
 
 .categories{
@@ -56,6 +59,7 @@
     width: 300px;
     padding: 10px;
     margin-top: 20px;
+    border: none;
 }
 
 .navmenu input:hover{
@@ -75,7 +79,7 @@
     background: #f7cbfa;
     cursor: pointer;
     margin-right: 20px;
-    margin-top: 0px;
+    margin-top: 15px;
 }
 
 .login button:hover{

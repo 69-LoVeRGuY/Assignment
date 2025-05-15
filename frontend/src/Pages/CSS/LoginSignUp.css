@@ -7,7 +7,7 @@
 
 .container{
     width: 580px;
-    height: 500px;
+    height: 400px;
     background: white;
     margin: auto;
     padding: 40px 60px;
@@ -15,7 +15,7 @@
 }
 
 .container h1{
-    margin: 20px 0px;
+    margin: 10px 0px;
     font-size: 30px;
 }
 
@@ -56,21 +56,4 @@
 
 .container button:hover{
     background: #fa1212;
-}
-
-.login{
-    margin-top: 20px;
-    color: #5c5c5c;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.login span{
-    color:#ff4141;
-    font-weight: 600;
-}
-
-.login span:hover{
-    text-decoration: underline;
-    cursor: pointer;
 }
