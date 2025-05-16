@@ -67,6 +67,29 @@
     cursor:text;
 }
 
+.loggedOut{
+    display: none;
+}
+
+.options button{
+    height: 45px;
+    width: 135px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid black;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 200;
+    background: #f7cbfa;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.options button:hover{
+    background: #f7abfc;
+    cursor: pointer;
+}
+
 .login button{
     height: 45px;
     width: 135px;

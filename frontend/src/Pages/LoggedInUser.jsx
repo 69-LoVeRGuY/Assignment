@@ -9,8 +9,8 @@ const LoggedInUser = () => {
     
 
   return (<div>
-    {isLoggedIn ? 
-        <div className='options'>
+    {localStorage.getItem('token') ? 
+        <div className='productOptions'>
             <Link to='/add' style={{textDecoration: 'none'}}><button type="button">Add Product</button></Link>
             <Link to='/update' style={{textDecoration: 'none'}}><button type="button">Update Product</button></Link>
             <Link to='/delete' style={{textDecoration: 'none'}}><button type="button">Delete Product</button></Link>

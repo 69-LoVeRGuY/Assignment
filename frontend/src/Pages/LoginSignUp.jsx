@@ -24,6 +24,7 @@ export const LoginSignUp = () => {
       if(response.status === 200) {
         console.log('Login successful!', response.data);
         setIsLoggedIn(true);
+        window.localStorage.setItem('token', JSON.stringify(response.data));
         navigate('/loggedin')
       }
       else{
@@ -42,10 +43,10 @@ export const LoginSignUp = () => {
         <div className="fields">
           <input type="text" placeholder='User name' id='name' onChange={(e) => {
             setUsername(e.target.value);
-          }} />
+          }} required/>
           <input type="password" placeholder='Password' id='password'onChange={(e) => {
             setPassword(e.target.value);
-          }}/>
+          }} required/>
         </div>
         <button type="button" id='login' onClick={handleLogin}>Login Now</button>
       </div>

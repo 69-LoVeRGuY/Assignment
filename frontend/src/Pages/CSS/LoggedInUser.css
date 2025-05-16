@@ -1,4 +1,4 @@
-.options{
+.productOptions{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,7 +7,7 @@
     height: 90vh;
 }
 
-.options button{
+.productOptions button{
     display: block;
     padding:10px;
     background: #ff4141;
@@ -18,7 +18,7 @@
     width: 400px;
 }
 
-.options button:hover{
+.productOptions button:hover{
     background: #fa1212;
     cursor: pointer;
 }

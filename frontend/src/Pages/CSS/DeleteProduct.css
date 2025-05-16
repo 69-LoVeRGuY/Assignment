@@ -1,0 +1,59 @@
+.deleteProductPage{
+    width: 100%;
+    height: 80vh;
+    background: #fce3fe;
+    padding-top: 80px;
+}
+
+.deleteProductContainer{
+    width: 580px;
+    height: 300px;
+    background: white;
+    margin: auto;
+    padding: 40px 60px;
+    border-radius: 10px;
+}
+
+.deleteProductContainer h1{
+    margin: 10px 0px;
+    font-size: 30px;
+}
+
+.deleteProduct input{
+    height: 72px;
+    width: 100%;
+    padding-left: 20px;
+    border: 1px solid #c9c9c9;
+    outline: none;
+    color: #5c5c5c;
+    font-size: 18px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.deleteProduct input:hover{
+    background: #f3f3f3;
+}
+
+.deleteProduct button{
+    width: 600px;
+    height: 72px;
+    color: white;
+    background: #ff4141;
+    margin-top: 30px;
+    border: none;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.deleteProduct button:hover{
+    background: #fa1212;
+}
+
+.deleteProduct h4{
+    color: #5c5c5c;
+    font-weight: 700;
+    padding-left: 170px;
+}

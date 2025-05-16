@@ -8,8 +8,24 @@ import LoggedInUser from './Pages/LoggedInUser';
 import AddProduct from './Pages/AddProduct';
 import UpdateProduct from './Pages/UpdateProduct';
 import DeleteProduct from './Pages/DeleteProduct';
+import { useAuth } from './Context/AuthContext';
 
 function App() {
+
+  const {isLoggedIn} = useAuth();
+
+  var time = 10;
+  var now = new Date().getTime();
+  var setupTime = localStorage.getItem('setupTime');
+  if (setupTime == null && isLoggedIn) {
+      localStorage.setItem('setupTime', now)
+  } else if (setupTime != null && isLoggedIn) {
+      if(now-setupTime > time*60*1000) {
+          localStorage.clear()
+          localStorage.setItem('setupTime', now);
+      }
+  }
+
   return (
     <div className="App">
       <BrowserRouter>

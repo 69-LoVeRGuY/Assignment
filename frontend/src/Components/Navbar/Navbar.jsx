@@ -11,6 +11,7 @@ export const Navbar = () => {
 
     const handleLogout = () => {
         setIsLoggedIn(false);
+        localStorage.removeItem('token');
     }
 
   return (
@@ -22,8 +23,12 @@ export const Navbar = () => {
         <div className="navmenu">
             <input type="text" name="search" id="search"placeholder='Search'/>
         </div>
+        <div className="options">
+            {localStorage.getItem('token') ? <Link to='/loggedin' style={{textDecoration: 'none'}}>
+            <button>Options</button></Link>: <div className='loggedOut'></div>}
+        </div>
         <div className="login">
-            {isLoggedIn ? <Link to='/'><button onClick={handleLogout}>Log Out</button></Link>:
+            {localStorage.getItem('token') ? <Link to='/'><button onClick={handleLogout}>Log Out</button></Link>:
             <Link to='/login'><button>Login</button></Link>}
         </div>
         
