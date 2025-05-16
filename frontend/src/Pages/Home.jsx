@@ -2,6 +2,7 @@ import React, {useContext} from 'react'
 import { Items } from '../Components/Item/Items';
 import dropdown_icon from '../Components/Assets/dropdown.png'
 import ShopContext from '../Context/ShopContext';
+import './CSS/Home.css'
 
 export const Home = () => {
 
@@ -53,7 +54,6 @@ export const Home = () => {
   }
   temp2.map(product => {
     finalProducts.push(product);
-    finalProducts.sort((a, b) => a.id - b.id);
   });
 
   const length = finalProducts.length;
@@ -64,7 +64,7 @@ export const Home = () => {
                 <span>Showing {length}</span> out of {Math.max(20,length)} products
             </p>
             <div className="sort">
-                Sort by <img src={dropdown_icon} alt='' />
+                <button type='button'>Sort by <img src={dropdown_icon} alt='' /> </button>
             </div>
         </div>
 

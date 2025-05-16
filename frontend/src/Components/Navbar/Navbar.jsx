@@ -11,7 +11,8 @@ export const Navbar = () => {
 
     const handleLogout = () => {
         setIsLoggedIn(false);
-        localStorage.removeItem('token');
+        localStorage.clear();
+        window.location.reload();
     }
 
   return (

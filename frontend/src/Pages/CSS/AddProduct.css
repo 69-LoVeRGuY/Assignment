@@ -7,7 +7,7 @@
 
 .addProductContainer{
     width: 580px;
-    height: 580px;
+    height: 610px;
     background: white;
     margin: auto;
     padding: 20px 60px;
@@ -46,4 +46,8 @@
     font-weight: 500;
     cursor: pointer;
     border-radius: 10px;
+}
+
+.addProduct h4{
+    padding-left: 170px;
 }
